@@ -10,7 +10,11 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
-  - [npm test](#npm-test)
+  - [npm test
+- [Find Travis CI's website](https://travis-ci.com/) and sign in.
+- Find your project and sync it with Travis CI.
+- Add build settings as documented [here](https://docs.travis-ci.com/user/tutorial/).
+- Add a .travis.yml file to the root of the project with the following content:](#npm-test)
   - [npm run build](#npm-run-build)
   - [npm run eject](#npm-run-eject)
 - [Supported Browsers](#supported-browsers)
@@ -176,7 +180,10 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
+Launches the test runner in the interactive watch mode.
+- Verify that your production builds match the expected output by adding the following code to the scripts field in package.json
+ Each .travis.yml file should have 5 lines and look like this:
+```yml<br>
 See the section about [running tests](#running-tests) for more information.
 
 ### `npm run build`
