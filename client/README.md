@@ -88,9 +88,25 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [Other Solutions](#other-solutions)
   - [Serving Apps with Client-Side Routing](#serving-apps-with-client-side-routing)
   - [Building for Relative Paths](#building-for-relative-paths)
-  - [Azure](#azure)
+  - [```sh
+git checkout -b gh-pages
+npm run deploy
+
+or
+
+yarn deploy
+```](#azure)
   - [Firebase](#firebase)
   - [GitHub Pages](#github-pages)
+- [Custom Domain](#custom-domain)
+
+### Publishing to a Custom Domain
+
+To publish your project to a custom domain, run the following command, replacing `customDomain` with your domain name:
+
+```sh
+gh-pages -d build -b customDomain
+```
   - [Configuring a Custom Domain](#configuring-a-custom-domain)
   - [Heroku](#heroku)
   - [Netlify](#netlify)
