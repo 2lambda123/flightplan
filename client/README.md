@@ -87,6 +87,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [Azure](#azure)
   - [Firebase](#firebase)
   - [GitHub Pages](#github-pages)
+  - [Configuring a Custom Domain](#configuring-a-custom-domain)
   - [Heroku](#heroku)
   - [Netlify](#netlify)
   - [Now](#now)
