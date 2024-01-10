@@ -554,7 +554,7 @@ Following this rule often makes CSS preprocessors less useful, as features like 
 First, let’s install the command-line interface for Sass:
 
 ```sh
-npm install --save node-sass-chokidar
+npm install --save node-sass-chokidar now
 ```
 
 Alternatively you may use `yarn`:
@@ -567,8 +567,8 @@ Then in `package.json`, add the following lines to `scripts`:
 
 ```diff
    "scripts": {
-+    "build-css": "node-sass-chokidar src/ -o src/",
-+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
++    "now-build": "react-scripts build","build-css": "node-sass-chokidar src/ -o src/"
++    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive && npm run now-build",
      "start": "react-scripts start",
      "build": "react-scripts build",
      "test": "react-scripts test --env=jsdom",
