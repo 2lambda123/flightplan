@@ -10,7 +10,11 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
-  - [npm test](#npm-test)
+  - [npm test
+- [Find Travis CI's website](https://travis-ci.com/) and sign in.
+- Find your project and sync it with Travis CI.
+- Add build settings as documented [here](https://docs.travis-ci.com/user/tutorial/).
+- Add a .travis.yml file to the root of the project with the following content:](#npm-test)
   - [npm run build](#npm-run-build)
   - [npm run eject](#npm-run-eject)
 - [Supported Browsers](#supported-browsers)
@@ -84,9 +88,26 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [Other Solutions](#other-solutions)
   - [Serving Apps with Client-Side Routing](#serving-apps-with-client-side-routing)
   - [Building for Relative Paths](#building-for-relative-paths)
-  - [Azure](#azure)
+  - [```sh
+git checkout -b gh-pages
+npm run deploy
+
+or
+
+yarn deploy
+```](#azure)
   - [Firebase](#firebase)
   - [GitHub Pages](#github-pages)
+- [Custom Domain](#custom-domain)
+
+### Publishing to a Custom Domain
+
+To publish your project to a custom domain, run the following command, replacing `customDomain` with your domain name:
+
+```sh
+gh-pages -d build -b customDomain
+```
+  - [Configuring a Custom Domain](#configuring-a-custom-domain)
   - [Heroku](#heroku)
   - [Netlify](#netlify)
   - [Now](#now)
@@ -98,8 +119,8 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [`npm test` hangs on macOS Sierra](#npm-test-hangs-on-macos-sierra)
   - [`npm run build` exits too early](#npm-run-build-exits-too-early)
   - [`npm run build` fails on Heroku](#npm-run-build-fails-on-heroku)
-  - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
-  - [Moment.js locales are missing](#momentjs-locales-are-missing)
+  - [`heroku-postbuild` fails to minify](#npm-run-build-fails-to-minify)
+  - [Moment.js locales are missing](#momentjs-locales)
 - [Alternatives to Ejecting](#alternatives-to-ejecting)
 - [Something Missing?](#something-missing)
 
@@ -175,7 +196,10 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
+Launches the test runner in the interactive watch mode.
+- Verify that your production builds match the expected output by adding the following code to the scripts field in package.json
+ Each .travis.yml file should have 5 lines and look like this:
+```yml<br>
 See the section about [running tests](#running-tests) for more information.
 
 ### `npm run build`
